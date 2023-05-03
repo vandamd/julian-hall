@@ -1,6 +1,10 @@
-/* import inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+/* Inter Font */
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
 
+/* Apple Garamond Font */
 @font-face {
     font-family: 'Applegaramond';
     src: url('static/font/AppleGaramond-LightItalic.ttf') format('truetype');
@@ -8,20 +12,18 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'Arial-Narrow';
-    src: url('static/font/Arial-Narrow.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-    font-family: 'Arial-Narrow', Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 32px;
+    word-spacing: -0.022em;
     line-height: 1.5;
-    padding: 1em 2em;
     color: #000000;
     background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 8px;
 }
 
 ::selection {
@@ -33,40 +35,16 @@ a {
     text-decoration: none;
 }
 
-.header {
+main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    font-weight: 100;
-    letter-spacing: -0.08em;
-    font-size: 10vw;
+    gap: 24px;
+    width: 825px;
 }
 
-.name {
-    font-family: 'Applegaramond';
-    font-style: italic;
-    font-weight: lighter;
-}
-
-.grid {
-    display: grid;
-    grid-template-areas:
-      "about preview"
-      "work preview";
-    grid-template-columns: 60% 40%;
-}
-
-.about {
-    grid-area: about;
-    margin-top: 24px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.about p {
+p {
     margin: 0;
-    font-size: 2.4vw;
 }
 
 .button {
@@ -89,35 +67,97 @@ a {
 
 .ntu-logo {
     display: inline-block;
-    width: 3.5%;
+    width: 3.4%;
     height: auto;
 }
 
 .ntu-logo svg {
-    transform: translateY(18%);
+    transform: translateY(20%);
 }
 
-.preview {
-    grid-area: preview;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 24px;
-}
-
-.preview img {
-    width: calc(100% - 2em);
-    height: auto;
-}
-
-footer {
+/* footer {
     position: absolute;
     bottom: 0;
-    left: 0;
-    padding-bottom: 1em;
-    padding-left: 2em;
+    right: 0;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
 }
 
 footer p {
+    font-size: 14px;
     margin: 0;
+}
+
+.vd {
+    font-family: 'AppleGaramond';
+    font-style: italic; 
+    font-size: 16px;
+} */
+
+
+/* When width <900 make font size smaller */
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 30px;
+    }
+
+    .dca-logo {
+        display: inline-block;
+        width: 7%;
+        height: auto;
+    }
+
+    .ntu-logo {
+        display: inline-block;
+        width: 3%;
+        height: auto;
+    }
+    
+    .ntu-logo svg {
+        transform: translateY(20%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 22px;
+    }
+
+    .dca-logo {
+        display: inline-block;
+        width: 13%;
+        height: auto;
+    }
+
+    .ntu-logo {
+        display: inline-block;
+        width: 6%;
+        height: auto;
+    }
+    
+    .ntu-logo svg {
+        transform: translateY(20%);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    body {
+        font-size: 18px;
+    }
+
+    .dca-logo {
+        display: inline-block;
+        width: 15%;
+        height: auto;
+    }
+
+    .ntu-logo {
+        display: inline-block;
+        width: 7%;
+        height: auto;
+    }
+    
+    .ntu-logo svg {
+        transform: translateY(20%);
+    }
 }
