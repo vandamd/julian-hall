@@ -81,7 +81,7 @@ p {
     min-width: 50px;
     max-width: 75px;
     height: auto;
-    position: fixed;
+    position: absolute;
     top: 1vh;
     left: 1vh;
     z-index: -1;
