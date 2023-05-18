@@ -61,7 +61,7 @@ p {
 
 .links {
     margin-top: 2vw;
-    font-size: 3vw;
+    font-size: 2vw;
     font-style: normal;
     font-weight: lighter;
     display: flex;
@@ -130,6 +130,6 @@ p {
     }
 
     .links {
-        font-size: 40px;
+        font-size: 28px;
     }
 }
