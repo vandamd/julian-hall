@@ -1,0 +1,135 @@
+/* Sequel Sans */
+@font-face {
+    font-family: 'Sequel Sans';
+    src: url('static/font/Sequel\ Sans\ Light\ Disp.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sequel Sans';
+    src: url('static/font/Sequel\ Sans\ Semi\ Bold\ Disp.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Sequel Sans', Arial, sans-serif;
+    font-size: 6vw;
+    font-weight: bold;
+    word-spacing: -0.022em;
+    line-height: 1.4;
+    color:rgb(236, 236, 236);
+    background-color: #191919;
+    margin: 0 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+::selection {
+    background-color: #26262648;
+}
+
+a {
+    color: #6d6d6d;;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 0;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-top: 30vh;
+}
+
+.about p {
+    text-align: center;
+}
+
+.links {
+    margin-top: 2vw;
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    margin-right: 5vw;
+}
+
+.links a:last-of-type {
+    margin-right: 0;
+}
+
+.logo {
+    width: 4%;
+    min-width: 50px;
+    max-width: 75px;
+    height: auto;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0 1em;
+    }
+
+    main {
+        align-items: flex-start;
+    }
+
+    .about {
+        width: auto;
+        margin-top: 20vh;
+    }
+
+    .about p {
+        text-align: left;
+        font-size: 10vw;
+    }
+
+    .links {
+        /* margin-top: 4vw; */
+        font-size: 6vw;
+        flex-direction: column;
+    }
+
+    .links a {
+        margin-right: 0;
+    }
+
+    .logo {
+        min-width: 45px;
+        top: 1em;
+        left: 1em;
+    }
+}
+
+/* If width >1200 */
+@media only screen and (min-width: 1400px) {
+    body {
+        font-size: 82px;
+    }
+
+    .links {
+        font-size: 28px;
+    }
+}
