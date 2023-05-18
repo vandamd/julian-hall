@@ -1,24 +1,27 @@
-/* Inter Font */
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
+/* Sequel Sans */
+@font-face {
+    font-family: 'Sequel Sans';
+    src: url('static/font/Sequel\ Sans\ Light\ Disp.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
 }
 
-/* Apple Garamond Font */
 @font-face {
-    font-family: 'Applegaramond';
-    src: url('static/font/AppleGaramond-LightItalic.ttf') format('truetype');
-    font-weight: lighter;
-    font-style: italic;
+    font-family: 'Sequel Sans';
+    src: url('static/font/Sequel\ Sans\ Semi\ Bold\ Disp.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 32px;
+    font-family: 'Sequel Sans', Arial, sans-serif;
+    font-size: 6vw;
+    font-weight: bold;
     word-spacing: -0.022em;
-    line-height: 1.5;
-    color: #D4D4D4;
+    line-height: 1.4;
+    color:rgb(236, 236, 236);
     background-color: #191919;
+    margin: 0 0;
 }
 
 main {
@@ -26,158 +29,107 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
 }
 
 ::selection {
-    background-color: #262626;
+    background-color: #26262648;
 }
 
 a {
-    color: #D4D4D4;
+    color: #6d6d6d;;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 p {
     margin: 0;
 }
 
-.button {
-    font-family: 'AppleGaramond';
-    font-style: italic;
-    border: 1px solid rgba(202, 202, 202, 0.25);
-    border-radius: 0.5rem;
-    padding: 0 0.5rem;
-}
-
-.button:hover {
-    background-color: #262626;
-}
-
-.dca-logo {
-    display: inline-block;
-    width: 8%;
-    height: auto;
-}
-
-.ntu-logo {
-    display: inline-block;
-    width: 3.4%;
-    height: auto;
-}
-
-.ntu-logo svg {
-    transform: translateY(20%);
-}
-
-.arrow {
-    position: absolute;
-    bottom: 0;
-    left: calc(-21px + 50vw);
-    cursor: pointer;
-    color:rgba(202, 202, 202, 0.25);
-}
-
 .about {
     display: flex;
     flex-direction: column;
-    width: 900px;
-    gap: 18px;
-    margin-top: 10%;
+    width: 90vw;
+    margin-top: 25vh;
 }
 
-
-
-
-
-
-
-
-
-
-/* footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding-bottom: 0.5em;
-    padding-right: 1em;
+.about p {
+    text-align: center;
 }
 
-footer p {
-    font-size: 14px;
-    margin: 0;
+.links {
+    margin-top: 2vw;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
 }
 
-.vd {
-    font-family: 'AppleGaramond';
-    font-style: italic; 
-    font-size: 16px;
-} */
+.links a {
+    margin-right: 5vw;
+}
 
+.links a:last-of-type {
+    margin-right: 0;
+}
 
-/* When width <900 make font size smaller */
-@media only screen and (max-width: 900px) {
+.logo {
+    width: 4%;
+    min-width: 50px;
+    max-width: 75px;
+    height: auto;
+    position: fixed;
+    top: 1vh;
+    left: 1vh;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
     body {
-        font-size: 30px;
+        margin: 0 1em;
     }
 
-    .dca-logo {
-        display: inline-block;
-        width: 7%;
-        height: auto;
+    main {
+        align-items: flex-start;
     }
 
-    .ntu-logo {
-        display: inline-block;
-        width: 3%;
-        height: auto;
+    .about {
+        width: auto;
+        margin-top: 15vh;
     }
-    
-    .ntu-logo svg {
-        transform: translateY(20%);
+
+    .about p {
+        text-align: left;
+        font-size: 10vw;
+    }
+
+    .links {
+        /* margin-top: 4vw; */
+        font-size: 28px;
+        flex-direction: column;
+    }
+
+    .links a {
+        margin-right: 0;
+    }
+
+    .logo {
+        min-width: 55px;
+        top: 1em;
+        left: 1em;
     }
 }
 
-/* @media only screen and (max-width: 900px) {
+/* If width >1200 */
+@media only screen and (min-width: 1400px) {
     body {
-        font-size: 22px;
+        font-size: 82px;
     }
 
-    .dca-logo {
-        display: inline-block;
-        width: 13%;
-        height: auto;
-    }
-
-    .ntu-logo {
-        display: inline-block;
-        width: 6%;
-        height: auto;
-    }
-    
-    .ntu-logo svg {
-        transform: translateY(20%);
+    .links {
+        font-size: 40px;
     }
 }
-
-@media only screen and (max-width: 300px) {
-    body {
-        font-size: 18px;
-    }
-
-    .dca-logo {
-        display: inline-block;
-        width: 15%;
-        height: auto;
-    }
-
-    .ntu-logo {
-        display: inline-block;
-        width: 7%;
-        height: auto;
-    }
-    
-    .ntu-logo svg {
-        transform: translateY(20%);
-    }
-} */
