@@ -8,39 +8,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="icon" href="static/media/logo.svg" type="image/svg+xml">
-    <meta property="og:title" content="Julian Hall">
+    <link rel="icon" href="static/media/favicon.png" type="image/png">
+    <!-- <meta property="og:title" content="Julian Hall">
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="https://julianhall.design/static/media/thumbnail.png">
     <meta property="og:url" content="https://julianhall.design">
     <meta property="og:description" content="Personal site of Julian Hall">
-    <meta property="og:site_name" content="Julian Hall">
+    <meta property="og:site_name" content="Julian Hall"> -->
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <img src="static/media/logo.svg" alt="logo" class="logo">
-
     <main>
+        <div class="profile">
+            <div class="profile-image">
+                <img src="static/media/julian.png" alt="Julian Hall">
+            </div>
+            <div class="profile-text-container">
+                <div class="profile-text">
+                    <span class="profile-name">Julian Hall</span>
+                    <span class="profile-title">Industrial Designer</span>
+                </div>
+                <div class="pill">
+                    <a href="mailto:hi@julianhall.design">Email</a>
+                </div>
+            </div>
+        </div>
+
         <div class="about">
-            <p>
-                Hello! I'm Julian, an industrial designer <br> at DCA Design International.
-            </p>
+            <p>I'm an industrial designer from Southport, UK.</p>
+            <p>Currently, I'm completing my product design degree at Nottingham Trent University.</p>
+            <p>I'm frickin locked in baby.</p>
         </div>
 
-        <div class="links">
-                <a href="static/media/CV.pdf" target="_blank">CV</a>
-                <a href="mailto:contact@julianhall.design">Email</a>
-                <a href="https://www.instagram.com/jln.dsn/" target="_blank">Instagram</a>
-                <a href="https://www.linkedin.com/in/jhall3/" target="_blank">LinkedIn</a>
-            </p>
+        <div class="music-activity">
+            <div class="music-container">
+                <div class="music-info">
+                    <img id="album-art" class="album-art" src="" alt="Album Art">
+                    <div class="music-text">
+                    <span id="track-name" class="track-name"></span>
+                        <span id="artist-name" class="artist-name"></span>
+                    </div>
+                </div>
+                <div class="music-status-container">
+                    <div class="status-indicator"></div>
+                    <span id="music-status"></span>
+                </div>
+            </div>
         </div>
 
+        <div class="experience">
+            <span class="experience-title">Experience</span>
+            <div class="experience-item">
+                <span class="experience-company">DCA</span>
+                <div class="experience-divider"></div>
+                <span class="experience-role">Industrial Designer</span>
+                <div class="experience-divider-mobile"></div>
+                <span class="experience-date">2023 - 2024</span>
+            </div>
+            <div class="experience-item">
+                <span class="experience-company">James Hall & Co</span>
+                <div class="experience-divider"></div>
+                <span class="experience-role">Graphic Designer</span>
+                <div class="experience-divider-mobile"></div>
+                <span class="experience-date">2022 - 2022</span>
+            </div>
+        </div>
 
+        <div class="projects">
+            <div class="project">
+                <span class="project-title">Record</span>
+                <img src="static/media/p1.png">
+            </div>
+
+            <div class="project">
+                <span class="project-title">Control</span>
+                <img src="static/media/p2.png">
+            </div>
+
+            <div class="project">
+                <span class="project-title">TechnoGym</span>
+                <img src="static/media/p3.png">
+                <img src="static/media/p3i.png">
+            </div>
+        </div>
     </main>
-
-    <footer>
-        <!-- <p>Crafted by <a href="https://vandam.tech" target="_blank" class="vd">Vandam</a></p> -->
-    </footer>
-
 </body>
+
 </html>
