@@ -7,9 +7,13 @@ async function getRecentTrack() {
         const track = data.recenttracks.track[0];
         const statusContainer = document.getElementById('music-status');
         const statusIndicator = document.querySelector('.status-indicator');
+        const albumArt = document.getElementById('album-art');
 
-        // Update track info
-        document.getElementById('album-art').src = track.image[2]['#text'] || 'path_to_fallback_image.png';
+        // Only set src if we have a valid image URL
+        if (track.image[2]['#text']) {
+            albumArt.src = track.image[2]['#text'];
+        }
+
         document.getElementById('track-name').textContent = track.name;
         document.getElementById('artist-name').textContent = track.artist['#text'];
 

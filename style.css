@@ -13,6 +13,17 @@
     font-style: normal;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 :root {
     font-family: 'Sequel Sans', serif;
     font-size: 16px;
@@ -63,6 +74,8 @@ main {
     align-items: center;
     justify-content: flex-start;
     gap: 1em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .profile-image img {
@@ -115,6 +128,8 @@ main {
 
 .about {
     width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .about p {
@@ -135,6 +150,8 @@ main {
     flex-direction: column;
     gap: 1em;
     margin-top: 2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .experience-item {
@@ -179,6 +196,8 @@ main {
     flex-direction: column;
     gap: 2em;
     margin-top: 2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .project {
@@ -197,6 +216,8 @@ main {
 .music-activity {
     width: 100%;
     margin-top: 2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .music-container {
@@ -226,6 +247,7 @@ main {
     width: 48px;
     height: 48px;
     border-radius: 0.1em;
+    background-color: rgb(238, 240, 241);
 }
 
 .music-text {
