@@ -7,6 +7,11 @@ async function getRecentTrack() {
         const statusContainer = document.getElementById('music-status');
         const statusIndicator = document.querySelector('.status-indicator');
         const albumArt = document.getElementById('album-art');
+        const musicContainer = document.querySelector('.music-container');
+
+        musicContainer.onclick = () => {
+            window.open(track.url, '_blank');
+        };
 
         if (track.image[2]['#text']) {
             albumArt.src = track.image[2]['#text'];
