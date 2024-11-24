@@ -1,17 +1,4 @@
-/* Sequel Sans */
-@font-face {
-    font-family: 'Sequel Sans';
-    src: url('static/font/Sequel\ Sans\ Light\ Disp.ttf') format('truetype');
-    font-weight: lighter;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Sequel Sans';
-    src: url('static/font/Sequel\ Sans\ Semi\ Bold\ Disp.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @keyframes fadeIn {
     from {
@@ -25,10 +12,10 @@
 }
 
 :root {
-    font-family: 'Sequel Sans', serif;
+    font-family: Open Sans, serif;
     font-size: 16px;
     font-weight: 300;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.03em;
     background-color: #ffffff;
 }
 
@@ -93,6 +80,10 @@ main {
     align-items: center;
 }
 
+.profile-name {
+    font-weight: 400;
+}
+
 .pill {
     border-radius: 9999px;
     background-color: rgb(238, 240, 241);
@@ -152,6 +143,10 @@ main {
     margin-top: 2em;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
+}
+
+.experience-title {
+    font-weight: 400;
 }
 
 .experience-item {
