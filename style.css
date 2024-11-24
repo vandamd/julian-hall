@@ -62,7 +62,7 @@ main {
     justify-content: flex-start;
     gap: 1em;
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-out 0.2s forwards;
 }
 
 .profile-image img {
@@ -120,7 +120,7 @@ main {
 .about {
     width: 100%;
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-out 0.3s forwards;
 }
 
 .about p {
@@ -135,84 +135,11 @@ main {
     margin-bottom: 0;
 }
 
-.experience {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 2em;
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.experience-title {
-    font-weight: 400;
-}
-
-.experience-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5em;
-}
-
-.experience-divider {
-    background-color: #e5e7eb;
-    height: 1px;
-    width: 100%;
-}
-
-.experience-divider-mobile {
-    background-color: #e5e7eb;
-    height: 1px;
-    width: 100%;
-    display: none;
-}
-
-.experience-company {
-    flex: none;
-}
-
-.experience-role, .experience-date {
-    color: #7e7e7e;
-    flex: none;
-}
-
-.experience-date {
-    display: flex;
-    justify-content: flex-end;
-    width: 92px;
-}
-
-.projects {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    margin-top: 2em;
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.project {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.project img {
-    width: 100%;
-    border-radius: 0.4em;
-    border: 0.2px solid #e5e7eb;
-}
-
 .music-activity {
     width: 100%;
     margin-top: 2em;
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-out 0.4s forwards;
 }
 
 .music-container {
@@ -280,6 +207,87 @@ main {
 
 .status-indicator.active {
     background-color: #22c55e;
+}
+
+.experience {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.experience-title {
+    font-weight: 400;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.experience-divider {
+    background-color: #e5e7eb;
+    height: 1px;
+    width: 100%;
+}
+
+.experience-divider-mobile {
+    background-color: #e5e7eb;
+    height: 1px;
+    width: 100%;
+    display: none;
+}
+
+.experience-company {
+    flex: none;
+}
+
+.experience-role, .experience-date {
+    color: #7e7e7e;
+    flex: none;
+}
+
+.experience-date {
+    display: flex;
+    justify-content: flex-end;
+    width: 92px;
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.6s forwards;
+}
+
+.projects-title {
+    font-weight: 400;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 0.4em;
+    border: 0.2px solid #e5e7eb;
+}
+
+.project img:last-of-type {
+    margin-bottom: 2em;
 }
 
 @media (min-width: 1400px) {

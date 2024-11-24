@@ -1,4 +1,3 @@
-// Config is loaded from config.js
 async function getRecentTrack() {
     try {
         const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${config.LASTFM_USERNAME}&api_key=${config.LASTFM_API_KEY}&format=json&limit=1`);
@@ -9,7 +8,6 @@ async function getRecentTrack() {
         const statusIndicator = document.querySelector('.status-indicator');
         const albumArt = document.getElementById('album-art');
 
-        // Only set src if we have a valid image URL
         if (track.image[2]['#text']) {
             albumArt.src = track.image[2]['#text'];
         }
@@ -17,13 +15,11 @@ async function getRecentTrack() {
         document.getElementById('track-name').textContent = track.name;
         document.getElementById('artist-name').textContent = track.artist['#text'];
 
-        // Check if track is currently playing
         if (track['@attr'] && track['@attr'].nowplaying === 'true') {
             statusIndicator.classList.add('active');
             statusContainer.textContent = 'Now listening';
         } else {
             statusIndicator.classList.remove('active');
-            // Format the timestamp
             const timestamp = new Date(track.date.uts * 1000);
             const timeAgo = getTimeAgo(timestamp);
             statusContainer.textContent = `Last played ${timeAgo}`;
@@ -51,6 +47,5 @@ function getTimeAgo(date) {
     }
 }
 
-// Update every 30 seconds
 getRecentTrack();
 setInterval(getRecentTrack, 30000);
